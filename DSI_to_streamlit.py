@@ -34,13 +34,13 @@ if(st.button('Calculate Fish Weight')):
         Height = {} cm.  
         Width = {} cm.  
         '''.format(l1,l2,l3,h,w))
-        st.success("Your Fish Weight is {} g.".format(result[0][0]))
+
         if result[0][0] <= 0:
-            st.error("Your Fish Weight is INVAILID")
+            st.error("Your Fish Weight is {} g. Your Fish Weight is INVAILID.".format(result[0][0]))
         elif result[0][0] <= 1500:
-            st.success("Your Fish is Legal.")
+            st.success("Your Fish Weight is {} g. Your Fish Weight is Legal.".format(result[0][0]))
         elif result[0][0] > 1500:
-            st.warning("Your Fish is Illegal.")
+            st.warning("Your Fish Weight is {} g. Your Fish Weight is Illegal.".format(result[0][0]))
 
     else:
 
