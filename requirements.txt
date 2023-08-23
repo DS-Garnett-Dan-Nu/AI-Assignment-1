@@ -4,6 +4,7 @@ ccxt
 google
 gspread
 pandas
+sklearn import joblib
 regex
 requests
 s3fs==0.4.*
