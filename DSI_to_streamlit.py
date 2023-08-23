@@ -36,5 +36,5 @@ if(st.button('Calculate Fish Weight')):
 
     else:
 
-        st.warning("One of you values is INVALID. Please Try Again.")
+        st.error("One of your values is INVALID. Please Try Again.")
 
