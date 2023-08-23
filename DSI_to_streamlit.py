@@ -1,4 +1,5 @@
 import streamlit as st 
+import requirements.txt
 
 # da title
 st.title('Welcome to DSI Fish Weight Calculater')
@@ -17,7 +18,6 @@ X_test = [[l1,l2,l3,h,w]]
 model = joblib.load("DSI_fish_model.joblib")
 
 result = model.predict(X_test)
-print(result)
 
 # check button pressed
 if(st.button('Calculate Fish Weight')):
