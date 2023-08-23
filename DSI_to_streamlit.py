@@ -24,21 +24,24 @@ result = model.predict(X_test)
 # check button pressed
 if(st.button('Calculate Fish Weight')):
 
-    if l1 > 0 and l2 > 0 and l3 > 0 and h > 0 and w > 0:
+    if l1 > 0 and l2 > 0 and l3 > 0 and h > 0 and w > 0 and:
 
         #fish weight yay!
         st.success('''
+        Attributes of the Fish  
         Length 1 = {} cm.  
         Length 2 = {} cm.  
         Length 3 = {} cm.  
         Height = {} cm.  
         Width = {} cm.  
         '''.format(l1,l2,l3,h,w))
-        st.success("Length 2 = {} cm.".format(l2))
-        st.success("Length 3 = {} cm.".format(l3))
-        st.success("Height = {} cm.".format(h))
-        st.success("Width = {} cm.".format(w))
         st.success("Your Fish Weight is {} g.".format(result[0][0]))
+        if result[0][0] <= 0:
+            st.error("Your Fish Weight is INVAILID")
+        elif result[0][0] <= 1500:
+            st.success("Your Fish is Legal.")
+        elif result[0][0] > 1500:
+            st.warning("Your Fish is Illegal.")
 
     else:
 
