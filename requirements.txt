@@ -1,11 +1,15 @@
-altair
-boto3
-ccxt
-google
-gspread
-pandas
-sklearn import joblib
-regex
+https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
+numpy
 requests
-s3fs==0.4.*
-streamlit==1.1.*
+tqdm
+regex
+transformers>=3.0.2
+scipy
+scikit-learn
+seqeval
+tensorboardx
+pandas
+tokenizers
+wandb
+streamlit
+simpletransformers>=0.47.2
