@@ -20,11 +20,10 @@ model = joblib.load("DSI_fish_model.joblib")
 
 result = model.predict(X_test)
 
-
 # check button pressed
 if(st.button('Calculate Fish Weight')):
 
-    if l1 > 0 and l2 > 0 and l3 > 0 and h > 0 and w > 0 and:
+    if l1 > 0 and l2 > 0 and l3 > 0 and h > 0 and w > 0:
 
         #fish weight yay!
         st.success('''
