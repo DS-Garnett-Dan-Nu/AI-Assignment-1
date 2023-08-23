@@ -27,7 +27,7 @@ if(st.button('Calculate Fish Weight')):
     if l1 > 0 and l2 > 0 and l3 > 0 and h > 0 and w > 0:
 
         #fish weight yay!
-        st.success("Length 1 = {} cm.{}{}".format(l1,l2,l3))
+        st.success("Length 1 = {} cm. /n Length 2 = {} cm. /n Length 3 = {} cm. /n Height = {} cm. /n Width = {} cm.".format(l1,l2,l3,h,w))
         st.success("Length 2 = {} cm.".format(l2))
         st.success("Length 3 = {} cm.".format(l3))
         st.success("Height = {} cm.".format(h))
