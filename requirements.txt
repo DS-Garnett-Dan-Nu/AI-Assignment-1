@@ -1,4 +1,10 @@
-streamlit
+altair
+boto3
+ccxt
+google
+gspread
 pandas
-numpy
-joblib
+regex
+requests
+s3fs==0.4.*
+streamlit==1.1.*
