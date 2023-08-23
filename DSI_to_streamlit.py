@@ -6,11 +6,11 @@ st.title('Welcome to DSI Fish Weight Calculater')
 st.text("Assignment 1 by DS and Hsi")
 
 # take parameters
-l1 = st.number_input("Enter your Length 1 (in cm)")
-l2 = st.number_input("Enter your Length 2 (in cm)")
-l3 = st.number_input("Enter your Length 3 (in cm)")
-h = st.number_input("Enter your Height (in cm)")
-w = st.number_input("Enter your Width (in cm)")
+l1 = st.number_input("Enter Fish Length 1 (in cm)")
+l2 = st.number_input("Enter Fish Length 2 (in cm)")
+l3 = st.number_input("Enter Fish Length 3 (in cm)")
+h = st.number_input("Enter Fish Height (in cm)")
+w = st.number_input("Enter Fish Width (in cm)")
 
 
 X_test = [[l1,l2,l3,h,w]]
@@ -36,13 +36,13 @@ if(st.button('Predict Fish Weight')):
         '''.format(l1,l2,l3,h,w))
 
         if result[0][0] <= 0:
-            st.error("Your Fish Weight is {} g. Your Fish Weight is INVAILID.".format(result[0][0]))
+            st.error("Fish Weight is {} g. Fish Weight is INVAILID.".format(result[0][0]))
         elif result[0][0] <= 500:
-            st.success("Your Fish Weight is {} g. Your Fish is Illegal.".format(result[0][0]))
+            st.success("Fish Weight is {} g. Fish is Illegal.".format(result[0][0]))
         elif result[0][0] <= 2500:
-            st.success("Your Fish Weight is {} g. Your Fish is Legal.".format(result[0][0]))
+            st.success("Fish Weight is {} g. Fish is Legal.".format(result[0][0]))
         elif result[0][0] > 2500:
-            st.warning("Your Fish Weight is {} g. Your Fish is Illegal.".format(result[0][0]))
+            st.warning("Fish Weight is {} g. Fish is Illegal.".format(result[0][0]))
 
     else:
 
