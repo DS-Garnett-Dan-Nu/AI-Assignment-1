@@ -1,6 +1,6 @@
 import streamlit as st 
-import pickle
-#import joblib
+#import pickle
+import joblib
 
 # da title
 st.title('Welcome to DSI Fish Weight Calculater')
@@ -16,9 +16,9 @@ w = st.number_input("Enter your Width (in cm)")
 
 X_test = [[l1,l2,l3,h,w]]
 
-#model = joblib.load("DSI_fish_model.joblib")
+model = joblib.load("DSI_fish_model.joblib")
 
-model = pickle.load(open("DS_FISH_MODEL.pkl",'rb'))
+#model = pickle.load(open("DS_FISH_MODEL.pkl",'rb'))
 result = model.predict(X_test)
 print(result)
 
