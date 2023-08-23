@@ -23,4 +23,4 @@ result = model.predict(X_test)
 if(st.button('Calculate Fish Weight')):
 
     #fish weight yay!
-    st.success("Your Fish Weight is {} g.".format(result))
+    st.success("Your Fish Weight is {} g.".format(result[0[0]]))
