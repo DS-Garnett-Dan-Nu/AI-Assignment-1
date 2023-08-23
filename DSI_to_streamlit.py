@@ -1,5 +1,5 @@
 import streamlit as st 
-from sklearn.externals import joblib
+import joblib
 
 # da title
 st.title('Welcome to DSI Fish Weight Calculater')
