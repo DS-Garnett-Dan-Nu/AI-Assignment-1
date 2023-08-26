@@ -35,7 +35,7 @@ st.title("Spam Email Detection")
 paragraph = st.text_area("Enter the email paragraph:")
 
 # "Predict" button to trigger the prediction
-if st.button("Predict"):
+if st.button("Check Email"):
     # Start the extraction
     word_appearances = count_word_appearances(paragraph, col_names)
 
@@ -59,6 +59,6 @@ if st.button("Predict"):
     result = model.predict(y_test2d)
     
     if result[0] == 1:
-       st.error("This email is appeared to be a SPAM / SCAM mail.")
+       st.error("This email appears to be a SPAM / SCAM mail.")
     else:
-       st.success("This email is appeared to be a LEGITIMATE mail.")
+       st.success("This email appears to be a LEGITIMATE mail.")
