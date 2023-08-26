@@ -52,7 +52,7 @@ if st.button("Predict"):
     #Reshape the array to 2D
     y_test2d = [y_test]
 
-    print(y_test2d)
+    print(y_test)
     
     #Import da MOOODEELL!
     model = joblib.load("spamail_model.joblib")
