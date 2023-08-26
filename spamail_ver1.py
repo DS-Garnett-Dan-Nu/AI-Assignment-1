@@ -45,7 +45,7 @@ if st.button("Predict"):
     #Count time!
     for word, count in word_appearances.items():
     
-        #print(f"'{word}' appears {count} times.") #this just for testing
+        print(f"'{word}' appears {count} times.") #this just for testing
     
         y_test.append(count)
     
