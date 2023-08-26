@@ -49,8 +49,6 @@ if st.button("Check Email"):
     
     #Reshape the array to 2D
     y_test2d = [y_test]
-
-    print(y_test2d)
     
     #Import da MOOODEELL!
     model = joblib.load("spamail_model.joblib")
@@ -59,6 +57,6 @@ if st.button("Check Email"):
     result = model.predict(y_test2d)
     
     if result[0] == 1:
-       st.error("This email appears to be a SPAM / SCAM mail.")
+       st.error("This email appears to be a SPAM / SCAM email.")
     else:
-       st.success("This email appears to be a LEGITIMATE mail.")
+       st.success("This email appears to be a LEGITIMATE email.")
