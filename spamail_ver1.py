@@ -38,29 +38,27 @@ paragraph = st.text_area("Enter the email paragraph:")
 if st.button("Predict"):
     # Start the extraction
     word_appearances = count_word_appearances(paragraph, col_names)
-#Start the extraction
-word_appearances = count_word_appearances(paragraph, col_names)
 
-#Data list to test
-y_test = []
-
-#Count time!
-for word, count in word_appearances.items():
-
-    #print(f"'{word}' appears {count} times.") #this just for testing
-
-    y_test.append(count)
-
-#Reshape the array to 2D
-y_test2d = [y_test]
-
-#Import da MOOODEELL!
-model = joblib.load("spamail_model.joblib")
-
-#Spam or no spam?
-result = model.predict(y_test2d)
-
-if result[0] == 1:
-   st.write("This email is predicted to be SPAM.")
-else:
-   st.write("This email is predicted NOT to be SPAM.")
+    #Data list to test
+    y_test = []
+    
+    #Count time!
+    for word, count in word_appearances.items():
+    
+        #print(f"'{word}' appears {count} times.") #this just for testing
+    
+        y_test.append(count)
+    
+    #Reshape the array to 2D
+    y_test2d = [y_test]
+    
+    #Import da MOOODEELL!
+    model = joblib.load("spamail_model.joblib")
+    
+    #Spam or no spam?
+    result = model.predict(y_test2d)
+    
+    if result[0] == 1:
+       st.write("This email is predicted to be SPAM.")
+    else:
+       st.write("This email is predicted NOT to be SPAM.")
