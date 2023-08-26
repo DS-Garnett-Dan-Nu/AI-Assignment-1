@@ -59,6 +59,6 @@ if st.button("Predict"):
     result = model.predict(y_test2d)
     
     if result[0] == 1:
-       st.write("This email is predicted to be SPAM.")
+       st.error("This email is appeared to be a SPAM / SCAM mail.")
     else:
-       st.write("This email is predicted NOT to be SPAM.")
+       st.success("This email is appeared to be a LEGITIMATE mail.")
