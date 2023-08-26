@@ -45,12 +45,14 @@ if st.button("Predict"):
     #Count time!
     for word, count in word_appearances.items():
     
-        print(f"'{word}' appears {count} times.") #this just for testing
+        #print(f"'{word}' appears {count} times.") #this just for testing
     
         y_test.append(count)
     
     #Reshape the array to 2D
     y_test2d = [y_test]
+
+    print(y_test2d)
     
     #Import da MOOODEELL!
     model = joblib.load("spamail_model.joblib")
